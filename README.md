@@ -1,5 +1,5 @@
-# Weather2BBQ
-Weather2BBQ-ReactNative
+# Weather2Fish
+Weather2Fish-ReactNative
 
 <b>To run on Android/Apple emulator device:</b>
 
