@@ -310,7 +310,7 @@ else {
     if (!this.state.searchedLocation){
       Alert.alert(
  'Whoops...',
- 'Enter a valid postcode, place name or landmark 🔥🍔'
+ 'Enter a valid fishing location. This might be a river, estuary, harbour or lake.'
 
 )
 }else{
@@ -435,7 +435,7 @@ else {
       console.log("Error fetching coordinates data.");
       Alert.alert(
  'Could not find weather for your location',
-  'Enter a valid postcode, place name or landmark 🔥🍔'
+  'Enter a valid fishing location or check your internet connection.'
 )
   self.setState({
     loadingInProcess: false
@@ -680,7 +680,7 @@ else {
       return (
 
         <ImageBackground
-                 source={require('./assets/coverimages/sunset_fishing.jpg')}
+                 source={require('./assets/coverimages/purple_fishing.jpg')}
                  style={styles.backgroundStyle}
                  >
 
@@ -712,7 +712,7 @@ else {
        backgroundColor={"white"}
        value={0}
        btnRadius={9.2}
-       btnColor={'#FF0000'}
+       btnColor={'indigo'}
        sliderRadius={110}
        sliderWidth={17.5}
        startDegree={0}
@@ -721,8 +721,8 @@ else {
        onPressOuterCircle={(value) => console.log(`Outer: ${value}`)}
        onValueChange={val => this.setState({ dateSelected: val })}
        onSlidingComplete={val => this.getVal(val)}
-       endGradient={"#FF4500"}
-       startGradient={"#FFD700"}
+       endGradient={"orange"}
+       startGradient={"purple"}
        showValue={'true'}
        textColor={'black'}
        textSize={20}
@@ -847,7 +847,7 @@ else {
     else {
           return (
       <ImageBackground
-               source={require('./assets/coverimages/sunset_fishing.jpg')}
+               source={require('./assets/coverimages/purple_fishing.jpg')}
                style={styles.backgroundStyle}
                >
 
@@ -878,7 +878,7 @@ else {
             backgroundColor={"white"}
             value={0}
             btnRadius={9.2}
-            btnColor={'#FF0000'}
+            btnColor={'indigo'}
             sliderRadius={110}
             sliderWidth={17.5}
             startDegree={0}
@@ -887,8 +887,8 @@ else {
             onPressOuterCircle={(value) => console.log(`Outer: ${value}`)}
             onValueChange={val => this.setState({ dateSelected: val })}
             onSlidingComplete={val => this.getVal(val)}
-            endGradient={"#FF4500"}
-            startGradient={"#FFD700"}
+            endGradient={"orange"}
+            startGradient={"purple"}
             showValue={'true'}
             textColor={'black'}
             textSize={20}
@@ -902,7 +902,7 @@ else {
         <TouchableOpacity
         style={styles.button}
         onPress={this.processSubmit}>
-        <Image source={require('./assets/weather2bbq.jpg')} style={{height: 75, width: 75 }}/>
+        <Image source={require('./assets/w2fish.png')} style={{height: 75, width: 75 }}/>
         </TouchableOpacity>
       </View>
 
@@ -910,7 +910,7 @@ else {
       <TouchableOpacity
       style={{position: 'relative', top: '-185%'}}
       onPress={this.toggleInfoModal}>
-      <Image source={require('./assets/info_icon.png')} style={{height: 20, width: 20, position: 'relative', left: '92%', top: '0%'}}/>
+      <Image source={require('./assets/info_icon_fish.png')} style={{height: 20, width: 20, position: 'relative', left: '92%', top: '0%'}}/>
       </TouchableOpacity>
       </View>
 
@@ -939,12 +939,12 @@ else {
 
         <ScrollView>
 
-      <Text style={{fontSize: 17, color: 'white', paddingLeft: 20, paddingRight: 20, paddingTop: 10}}>Weather2BBQ - an app by <Text style={{fontSize: 17, color: '#FF0000'}} onPress={()=>Linking.openURL('https://github.com/jah1603')}>James Henderson</Text><Text style={{fontSize: 17, color: '#FF0000'}} onPress={()=>Linking.openURL('https://github.com/SFR1981')}>, Stephen Rooney</Text> &<Text style={{fontSize: 18, color: '#FF0000'}} onPress={()=>Linking.openURL('https://github.com/DavidAPears')}> David Pears.</Text> Weather2BBQ is part of the Weather2 series (see also Weather2Gold, Weather2Wed & Weather2Walk)</Text>
+      <Text style={{fontSize: 17, color: 'white', paddingLeft: 20, paddingRight: 20, paddingTop: 10}}>Weather2Fish - an app by <Text style={{fontSize: 17, color: 'purple'}} onPress={()=>Linking.openURL('https://github.com/jah1603')}>James Henderson</Text><Text style={{fontSize: 17, color: 'purple'}} onPress={()=>Linking.openURL('https://github.com/SFR1981')}>, Stephen Rooney</Text> &<Text style={{fontSize: 18, color: 'purple'}} onPress={()=>Linking.openURL('https://github.com/DavidAPears')}> David Pears.</Text> Weather2Fish is part of the Weather2 series (see also Weather2BBQ, Weather2Golf, Weather2Wed & Weather2Walk)</Text>
 
-      <Text style={{fontSize: 17, color: 'white', padding: 20}}>David, James & Stephen can usually be found in an Edinburgh cafe, trying to figure out <Text style={{fontSize: 18, color: '#FF0000'}} onPress={()=>Linking.openURL('https://www.reactnative.com')}>ReactNative.</Text></Text>
-       <Text style={{fontSize: 17, color: 'white', paddingLeft: 20, paddingTop: 10, paddingRight: 20, paddingBottom: 10}}>Weather2BBQ aims to help al fresco chefs assess the weather for outdoor cooking, at any UK loaction. Powered by <Text style={{fontSize: 17, color: '#FF0000'}} onPress={()=>Linking.openURL('https://darksky.net/')}>Dark Sky</Text>, the app returns the typical weather (based on historical averages) for any given location. The app utilises<Text style={{fontSize: 18, color: '#FF0000'}} onPress={()=>Linking.openURL('https://www.geograph.org.uk/')}> Geograph's API</Text> which means that any part of the UK can be entered as a search term (the fuzzy search can handle place names, postcodes, regions, sites of interest or even landmarks). Weather2BBQ will also suggest nearby hotels in and around your location, for friends and neighbours, using the <Text style={{fontSize: 18, color: '#FF0000'}} onPress={()=>Linking.openURL('https://developer.foursquare.com/places-api')}>FourSquare API</Text>. NB. There is no commercial benefit to us, the creators; this information is provided as a free service. Icons on this app are from flaticon.com.</Text>
+      <Text style={{fontSize: 17, color: 'white', padding: 20}}>David, James & Stephen can usually be found in an Edinburgh cafe, trying to figure out <Text style={{fontSize: 18, color: 'purple'}} onPress={()=>Linking.openURL('https://www.reactnative.com')}>ReactNative.</Text></Text>
+       <Text style={{fontSize: 17, color: 'white', paddingLeft: 20, paddingTop: 10, paddingRight: 20, paddingBottom: 10}}>Weather2Fish aims to help both freshwater and saltwater fishing hobbyists assess the weather at their favourite fishing spots in Britain and Ireland. Powered by <Text style={{fontSize: 17, color: 'purple'}} onPress={()=>Linking.openURL('https://darksky.net/')}>Dark Sky</Text>, the app returns the typical weather (based on historical averages) for any given location. The app utilises<Text style={{fontSize: 18, color: 'purple'}} onPress={()=>Linking.openURL('https://www.geograph.org.uk/')}> Geograph's API</Text> which means that any part of the UK can be entered as a search term (the fuzzy search can handle place names, postcodes, regions, sites of interest or even landmarks). Weather2Fish will also suggest nearby hotels in and around your location, for you and your friends, using the <Text style={{fontSize: 18, color: 'purple'}} onPress={()=>Linking.openURL('https://developer.foursquare.com/places-api')}>FourSquare API</Text>. NB. There is no commercial benefit to us, the creators; this information is provided as a free service. Icons on this app are from flaticon.com.</Text>
 
-       <Text style={{fontSize: 17, fontWeight: 'bold', color: 'white', paddingLeft: 20}}>Weather2BBQ</Text>
+       <Text style={{fontSize: 17, fontWeight: 'bold', color: 'white', paddingLeft: 20}}>Weather2Fish</Text>
        <Text style={{fontSize: 17, fontWeight: 'bold', color: 'white', paddingBottom: 20, paddingLeft: 20}}>December 2018</Text>
 
        </ScrollView>
@@ -958,7 +958,7 @@ else {
       style={{borderWidth: 0, borderRadius: 10, justifyContent: 'center', alignItems: 'center'}}>
 
       <LinearGradient
-        colors={['#FFA500', '#FF4500']}
+        colors={['purple', 'orange']}
         style={{
           position: 'absolute',
           left: 0,
@@ -1004,7 +1004,7 @@ else {
                 >
 
                 <LinearGradient
-                  colors={['#FFD700', '#FF4500']}
+                  colors={['purple', 'orange']}
                   style={{
                     position: 'absolute',
                     left: 0,
@@ -1038,11 +1038,11 @@ else {
                      <ScrollView>
 
                      <View style={styles.weatherItem}>
-                     <Image source={require('./assets/grill.png')} style={{width: 75, height: 75}}/>
+                     <Image source={require('./assets/fishing.png')} style={{width: 75, height: 75}}/>
 
                      <View style={{flex: 1, flexDirection: 'column', justifyContent: 'center'}}>
 
-                     <Text style={styles.weatherItemText}>Lighting conditions </Text>
+                     <Text style={styles.weatherItemText}>Casting conditions</Text>
 
                     <View style={{alignItems: 'center'}}>
                      <Button
