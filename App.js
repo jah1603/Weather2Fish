@@ -128,7 +128,17 @@ export default class App extends Component {
     });
 
      this.setState({ fontLoaded: true });
-     console.log("FONT LOADED", this.state.fontLoaded);
+     var urls = ['http://weather2wed.herokuapp.com', 'http://weather5wed5.herokuapp.com', 'http://weather2wed2.herokuapp.com', 'http://weather2wed3.herokuapp.com', 'http://weather2wed4.herokuapp.com']
+
+     Promise.all(urls.map((url) => {
+       return this.nudgeHeroku(url);
+     }))
+  }
+
+  nudgeHeroku(url){
+    return axios.get(url)
+      .then((response) => console.log(`${url} response: `, response.data)
+    ).catch(err => { console.log('caught', err.message); });
   }
 
   convertSecondsToCalendarDate(){
