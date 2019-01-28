@@ -27,6 +27,7 @@ import {
 } from 'react-native-indicators';
 
 global.self = global;
+console.disableYellowBox = true
 
 // const Weather = require('./models/Weather.js');
 import { getWeatherData } from './models/Helper.js';
